@@ -1,0 +1,5 @@
+a = float(input())
+print(format(a,'.3f'))
+
+a = float(input())
+print(round(a,4))
