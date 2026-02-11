@@ -1,0 +1,17 @@
+import sys
+
+# 循环读取标准输入的每一行（控制台输入的内容，直到输入结束
+for line in sys.stdin:
+    # 将当前行按空白字符（空格、制表符等）分割成列表，取第一个元素赋值给a
+    a = line.split()[0]
+    if "." in a:
+        print(format(float(a), ".1f"))
+    else:
+        print(a)
+
+a=input()
+b=input()
+c=float(input())
+d=input()
+e=input()
+print(a,b,f'{c:.1f}',d,e,sep='\n')
