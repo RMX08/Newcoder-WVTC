@@ -1,0 +1,8 @@
+# map 是 Python 内置函数，批量处理可迭代对象的每个元素
+# map(处理函数, 可迭代对象1, 可迭代对象2, ...)
+a,b = map(int,input().split())
+print(a+b)
+
+a,b = list(map(int,input().split()))
+print(a+b)
+# map、list都为可迭代对象
