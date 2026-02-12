@@ -1,0 +1,10 @@
+K = float(input())
+C = K - 273.15
+F = C * 1.8 + 32
+print(F)
+
+print(f'{F:.3f}')
+
+print(format(F,'.3f'))
+
+print(round(F,3))
