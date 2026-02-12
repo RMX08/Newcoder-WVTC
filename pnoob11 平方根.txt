@@ -1,0 +1,5 @@
+n = int(input())
+# print(int(n**0.5))
+
+import math
+print(int(math.sqrt(n)))
