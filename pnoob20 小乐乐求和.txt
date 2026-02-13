@@ -1,0 +1,39 @@
+n = int(input())
+
+# 方法一：(大数据下运行超时)
+sum = 0
+i = 1
+while i<=n:
+    sum += i
+    i += 1
+print(sum)
+
+# 方法二：
+sum = (1+n)*n/2
+print(int(sum))
+
+# 方法三：
+ans = sum(range(n + 1))
+print(ans)
+
+# 方法四：
+def sum_recursive(start, end):
+    """
+    分治递归求和：计算 [start, end] 范围内所有整数的和
+    :param start: 起始数
+    :param end: 结束数
+    :return: 区间和
+    """
+    # 递归终止条件：区间只有一个数，直接返回
+    if start == end:
+        return start
+    # 拆分区间：取中间值mid，把[start,end]拆成[start,mid]和[mid+1,end]
+    mid = (start + end) // 2
+    # 递归计算左右两部分的和，再合并
+    left_sum = sum_recursive(start, mid)
+    right_sum = sum_recursive(mid + 1, end)
+    return left_sum + right_sum
+
+# 调用递归函数，求和范围1~n（若n=0则直接返回0）
+result = sum_recursive(1, n) if n > 0 else 0
+print(result)
