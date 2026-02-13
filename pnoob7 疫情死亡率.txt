@@ -1,0 +1,2 @@
+a,b = map(float, input().split())
+print(format((b / a)*100,'.3f') + '%')
