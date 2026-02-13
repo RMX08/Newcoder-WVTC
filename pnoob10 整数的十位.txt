@@ -1,0 +1,10 @@
+方法一：
+s = input()
+n = int(s)
+print(n%100//10)
+
+方法二：
+if n < 10:
+    print(0)
+else:
+    print(s[-2])
