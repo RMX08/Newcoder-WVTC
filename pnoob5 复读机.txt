@@ -1,0 +1,8 @@
+import sys
+
+for line in sys.stdin:
+    a = line.split()[0]
+    if "." in a:
+        print(format(float(a), ".1f"))
+    else:
+        print(a)
