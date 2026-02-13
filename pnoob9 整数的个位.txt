@@ -1,5 +1,0 @@
-n = int(input())
-print(n%10)
-
-a = input()
-print(a[-1])
